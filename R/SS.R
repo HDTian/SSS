@@ -91,6 +91,9 @@ SS<-function(       Z ,
 
   time_points_for_prediction<- tpoints
 
+  if( is.na(x_baseline_used)  ){ x_baseline_used <- mean(  X )  }
+  x_baseline<-x_baseline_used
+
   hx_interval_estimate<-c()
   confirmed_timepoints<- pos
   for(x_current in time_points_for_prediction){

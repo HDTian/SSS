@@ -26,13 +26,13 @@ it returns a list contains
 }
 
 \examples{
-# calculate the pi
-xvec<-seq( 0,1, length=1000   )
+# calculate pi
+xvec<-seq( 0,1, length=10000   )
 yvec <- sqrt(1- (1-xvec)^2)
 int_res<- my_int_function(xvec, yvec)$sum
 
-#pi_est
-int_res*4
+#estimated pi value
+int_res*4  #3.14159
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
