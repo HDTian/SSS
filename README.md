@@ -43,9 +43,9 @@ easily fit with one function
 SSS_res <- SSS(Z,X,Y,x_baseline_used = 0)  # use 0 as the basline value for defining the effect function h(x)
 ```
 
-see the posterior change-point location via `SSS_res$PIP_plot` ![say sth](plots/Fig1.JPG)
+see the posterior change-point location via `SSS_res$PIP_plot` ![Fig1](plots/Fig1.JPG)
 
-see the estimated effect function $h(x)$ via `SSS_res$hx`
+see the estimated effect function $h(x)$ via `SSS_res$hx` ![Fig1](plots/Fig2.JPG)
 
 ## 
 
