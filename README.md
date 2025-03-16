@@ -45,7 +45,25 @@ SSS_res <- SSS(Z,X,Y,x_baseline_used = 0)  # use 0 as the basline value for defi
 
 see the posterior change-point location via `SSS_res$PIP_plot` ![Fig1](plots/Fig1.JPG)
 
-see the estimated effect function $h(x)$ via `SSS_res$hx` ![Fig1](plots/Fig2.JPG)
+see the estimated effect function $h(x)$ via `SSS_res$hx` ![Fig2](plots/Fig2.JPG)
+
+try other examples
+
+``` r
+Y <- 2*(X+1)*(X>-1) -2*(X-1)*(X>1)   + U + Ey  # two change-points located at x=-1 and x=1
+SSS_res <- SSS(Z,X,Y,x_baseline_used = 0)  
+```
+
+call `SSS_res$PIP_plot` and `SSS_res$hx` for fitting results ![Fig3](plots/Fig3.JPG) ![Fig4](plots/Fig4.JPG)
+
+you can also try parametric fitting with specified change-point (e.g. according to posterior mean)
+
+``` r
+SS_res <- SS(Z,X,Y,x_baseline_used = 0, pos = SSS_res$posterior_mean )
+SS_res$hx
+```
+
+![Fig5](plots/Fig5.jpg)
 
 ## 
 
