@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Haodong Tian
 Maintainer: Haodong Tian <htian2@mgh.harvard.edu>
 Description: The three 'S' layers (stratification, scalar-on-function/scalar regression, sum-of-single-effect) for studying nonlinear effect in instrumental variable analysis.
-License: License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 4.0)
