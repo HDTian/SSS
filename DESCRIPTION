@@ -11,3 +11,4 @@ LazyData: true
 Depends: R (>= 4.0)
 Imports: scales, ggplot2, mixtools, DRMR, susieR
 Remotes: github::HDTian/DRMR
+RoxygenNote: 7.2.3
