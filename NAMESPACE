@@ -1,3 +1,7 @@
 exportPattern("^[[:alpha:]]+")
 importFrom(DRMR, Stratify)
 importFrom(susieR, susie)
+importFrom(susieR, susie_get_cs)
+import(ggplot2)
+import(scales)
+import(mixtools)
