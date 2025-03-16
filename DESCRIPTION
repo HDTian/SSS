@@ -9,5 +9,5 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 4.0)
-Imports: scales, tidyverse, data.table, MendelianRandomization, mixtools, DRMR, susieR
+Imports: scales, tidyverse, ggplot2,data.table, MendelianRandomization, mixtools, DRMR, susieR
 Remotes: github::HDTian/DRMR
