@@ -40,7 +40,8 @@ SSS_res <- SSS(Z,X,Y,x_baseline_used = 0)  # use 0 as the basline value for defi
 ```
 see the posterior change-point location via `SSS_res$PIP_plot`
 
-see the estimated effect function $h(x)$
+
+see the estimated effect function $h(x)$ via `SSS_res$hx`
 
 
 
