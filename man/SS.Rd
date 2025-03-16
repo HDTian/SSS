@@ -8,7 +8,7 @@ parametric fitting using specified change-points
 this function adopts two 'S' methods (Stratificaiton, Scalar-on-function regression) and parametric fitting with specified change-points to obtain the estimated effect shape function
 }
 \usage{
-SSS(Z,X,Y,pos,Ns_used=100,x_baseline_used = NA,precision =100)
+SS(Z,X,Y,pos,Ns_used=100,x_baseline_used = NA,precision =100)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
