@@ -20,7 +20,6 @@ SS(Z,X,Y,pos,Ns_used=100,x_baseline_used = NA,precision =100)
     \item{x_baseline_used}{a value indicating the baseline exposure value used for defining the effect shape function \eqn{h(x)}. Defult is to take the exposure mean as the baseline level}
     \item{precision}{a integer indicating the degree of precision in the exposure quntiles, which is equal to the number of internal uniform grid. Default is 100.}
 }
-}
 \details{
 the inputted vector \code{Z}, \code{X}, \code{Y} should be strictly matched. No missing or NA value is allowed.
 }
@@ -31,21 +30,6 @@ It returns a list, containing
 \item{Var_bhat}{the covariance matrix of \code{bhat}}
 \item{hx_ggdata}{the data frame used for ggplot of the estimated effect shape function}
 \item{hx}{plot of the estimated effet shape function}
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 N<-50000
