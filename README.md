@@ -67,4 +67,4 @@ SS_res$hx
 
 ## 
 
-Interested in stratification and its application in Mendelian randomization with more ML algorithms? see [RFQT](https://github.com/HDTian/RFQT) and [DRMR](https://github.com/HDTian/DRMR)
+Interested in stratification and its application in Mendelian randomization? see [RFQT](https://github.com/HDTian/RFQT) and [DRMR](https://github.com/HDTian/DRMR)
