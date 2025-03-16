@@ -4,8 +4,8 @@ Title: SSS framework for nonlinear IV analysis
 Version: 0.1.0
 Author: Haodong Tian
 Maintainer: Haodong Tian <htian2@mgh.harvard.edu>
-Description: The three 'S' layers (stratification, scalar-on-function/scalar regression, sum-of-single-effect) for studying nonlinear effect in instrumental variable analysis
-License: What license is it under?
+Description: The three 'S' layers (stratification, scalar-on-function/scalar regression, sum-of-single-effect) for studying nonlinear effect in instrumental variable analysis.
+License: License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 4.0)
