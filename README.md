@@ -4,7 +4,10 @@ The SSS framework for nonlinear IV analysis
 
 This framework contains the three **S** layers (**S**tratification; **S**calar-on-function regression; **S**um-of-single-effect/SuSiE fitting) to conduct powerful nonlinear effect estimation in instrument variable analysis.
 
-The SSS method can work well, even with - [x] *weak IV* - [x] *binary IV* - [x] *complex or unknown confounding pattern*
+The SSS method can work well, even with 
+- [x] *weak IV* 
+- [x] *binary IV* 
+- [x] *complex or unknown confounding pattern*
 
 it is *simple*, *powerful*, and can be *implemented quickly* with quite *low computational burden* 🚀
 
@@ -25,13 +28,13 @@ library(SSS)
 try the following example, or with your data (`Z` is your IV, `X` is your exposure, `Y` is your outcome)
 
 ``` r
-N<-50000
+N <- 50000
 set.seed(100)
 Z <- rbinom( N , 1 , 0.5 )
 U <- rnorm( N , 0 , 1 )
 Ex <- rnorm( N , 0 , 1 )
 alphaZ<- 0.15
-X <-  alphaZ*Z + U + Ex    # weak instrument
+X <-  alphaZ*Z + U + Ex    #very weak instrument
 # summary( lm(  X  ~ Z )  )$r.squared   #  < 0.01
 Ey <- rnorm( N , 0 , 1 )
 Y <- 1.0*(X-1)*(X>1)  + U + Ey  # one change-point located at x=1
