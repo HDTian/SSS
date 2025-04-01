@@ -11,14 +11,19 @@ SSS<-function( Z ,
                Y ,
                Ns_used=100, # the number of strata
                x_baseline_used = NA ,  # the basline exposure level; default is mean(X)
+               tpoints = 'quantile', # the tpoints style
                precision =100    # the precision number used in the exposure quantile region; default is 100
                ){
 
 
   RES<-list()
 
-
-  tpoints<- quantile(X, seq(0,1, length=precision+1)    ) # tpoints are used for weight function and its integration
+  if(tpoints == 'quantile'){
+    tpoints<- quantile(X, seq(0,1, length=precision+1)    ) # tpoints are used for weight function and its integration
+  }
+  if(tpoints == 'uniform'){
+    tpoints<- seq(  min(X)  ,max(X), length=precision+1)
+  }
 
   ### DR stratification with strata number = Ns_used ---------------------------------------------------------------------
   dat_<-data.frame(  Z=Z, X=X, Y=Y )   # X:= alcohol   with outcome SBP
