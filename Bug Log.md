@@ -7,7 +7,7 @@ Caused by error in `smooth.construct.cr.smooth.spec()`:
 ! x has insufficient unique values to support 60 knots: reduce k. 
 ```
 
-In the PIP polt `geom_smooth` used smoothed curve but sometimes it cannot work; so now use `geom_point()+ geom_line()` and no smooth)
+In the PIP plot `geom_smooth` used smoothed curve but sometimes it cannot work; so now use `geom_point()+ geom_line()` and no smooth)
 
 ``` r
 Error in data.frame(positions = rep(tpoints, times = L_used), PIP = as.vector(t(PIPres)),  : 
