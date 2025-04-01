@@ -111,7 +111,9 @@ SSS<-function( Z ,
                          KK  = rep(   paste0(  'Detected Change-point #' , 1:L_used )   ,each=ncol(PIPres  )     )     )
 
   p<-ggplot(ggdata, aes(x = positions, y = PIP)) +
-    geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", k = 60), color='black',se = FALSE) +
+    geom_point()+
+    geom_line() +  # 直接连接点
+    #geom_smooth(method = "gam", formula = y ~ s(x, bs = "cs", k = 60), color='black',se = FALSE) +
     geom_vline(aes(xintercept = posterior_mode), linetype = "dashed") +
     geom_vline(aes(xintercept = posterior_mean), linetype = "dotted") +
     labs(x = "Exposure level", y = "Posterior inclusion probability") +
