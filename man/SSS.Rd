@@ -8,7 +8,7 @@ SSS method for studying the nonlinear effect in instrumental variable analysis
 this function adopts thee 'S' methods (Stratificaiton, Scalar-on-function regression, and SuSiE) to obtain the estimated effect shape function
 }
 \usage{
-SSS(Z,X,Y,Ns_used=100,x_baseline_used = NA,tpoints = 'quantile',precision =100)
+SSS(Z,X,Y,Ns_used=100,x_baseline_used = NA,tpoints_used = 'quantile',precision =100)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -17,7 +17,7 @@ SSS(Z,X,Y,Ns_used=100,x_baseline_used = NA,tpoints = 'quantile',precision =100)
     \item{Y}{a vector corresponding to the outcome}
     \item{Ns_used}{a integer indicating the number of strata}
     \item{x_baseline_used}{a value indicating the baseline exposure value used for defining the effect shape function \eqn{h(x)}. Defult is to take the exposure mean as the baseline level}
-    \item{tpoints}{a character indicates the type of exposure candidate points. Default is quantile, means the candidate points will be the sample quantile points. Alternative is the 'uniform', corresponding to the uniform candidate points between min(exposure) and max(exposure)}
+    \item{tpoints_used}{a character indicates the type of exposure candidate points. Default is quantile, means the candidate points will be the sample quantile points. Alternative is the 'uniform', corresponding to the uniform candidate points between min(exposure) and max(exposure)}
     \item{precision}{a integer indicating the degree of precision in the exposure quntiles, which is equal to the number of internal uniform grid. Default is 100.}
 }
 \details{

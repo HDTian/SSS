@@ -11,17 +11,17 @@ SSS<-function( Z ,
                Y ,
                Ns_used=100, # the number of strata
                x_baseline_used = NA ,  # the basline exposure level; default is mean(X)
-               tpoints = 'quantile', # the tpoints style
+               tpoints_used = 'quantile', # the tpoints style
                precision =100    # the precision number used in the exposure quantile region; default is 100
                ){
 
 
   RES<-list()
 
-  if(tpoints == 'quantile'){
+  if(tpoints_used == 'quantile'){
     tpoints<- quantile(X, seq(0,1, length=precision+1)    ) # tpoints are used for weight function and its integration
   }
-  if(tpoints == 'uniform'){
+  if(tpoints_used == 'uniform'){
     tpoints<- seq(  min(X)  ,max(X), length=precision+1)
   }
 
