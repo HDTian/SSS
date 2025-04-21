@@ -57,7 +57,7 @@ Y <- 2*(X+1)*(X>-1) -2*(X-1)*(X>1)   + U + Ey  # two change-points located at x=
 SSS_res <- SSS(Z,X,Y,x_baseline_used = 0)  
 ```
 
-call `SSS_res$PIP_plot` and `SSS_res$hx` for fitting results ![Fig3](plots/Fig3.JPG) ![Fig4](plots/Fig4.JPG)
+call `SSS_res$PIP_plot` and `SSS_res$hx` for fitting results ![Fig3](plots/Fig3.JPG) 
 
 you can also try parametric fitting with specified change-point (e.g. according to posterior mean)
 
@@ -66,7 +66,6 @@ SS_res <- SS(Z,X,Y,x_baseline_used = 0, pos = SSS_res$posterior_mean )
 SS_res$hx
 ```
 
-![Fig5](plots/Fig5.jpg)
 
 ## 
 
