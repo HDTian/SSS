@@ -2,14 +2,23 @@
 
 The SSS framework for nonlinear IV analysis
 
-This framework contains the three **S** layers (**S**tratification; **S**calar-on-function regression; **S**um-of-single-effect/SuSiE fitting) to conduct powerful nonlinear effect estimation in instrument variable analysis.
+The SSS framework is for nonlinear causal effect analysis using instrumental variables. It contains the three **S** layers: 
+**S**tratification  
+**S**calar-on-function or **S**calar-on-scalar regression model  
+**S**um-of-single-effect fitting  
 
-The SSS method can work well, even with 
-- [x] *weak IV* 
-- [x] *binary IV* 
-- [x] *complex or unknown confounding pattern*
+so that SSS framework can work well in
+- ✅testing whether the effect is nonlinear or not   
+- ✅estimating the causal effect function of any shape   
+- ✅investigating the potential effect change-point (both its number and locations) 
 
-it is *simple*, *powerful*, and can be *implemented quickly* with quite *low computational burden* 🚀
+even with 
+- weak IV 
+- single binary IV 
+- invalid IV 
+- complex or unknown confounding pattern  
+
+it is simple, powerful, and can be implemented quickly with quite low computational burden 🚀
 
 Paper: *to be added*
 
@@ -46,9 +55,7 @@ easily fit with one function
 SSS_res <- SSS(Z,X,Y,x_baseline_used = 0)  # use 0 as the basline value for defining the effect function h(x)
 ```
 
-see the posterior change-point location via `SSS_res$PIP_plot` (below left), and the estimated effect function $h(x)$ via `SSS_res$hx` (below right)
-![Fig1](plots/Fig1.png)
-
+see the posterior change-point location via `SSS_res$PIP_plot` (below left), and the estimated effect function $h(x)$ via `SSS_res$hx` (below right) ![Fig1](plots/Fig1.png)
 
 try other examples
 
@@ -57,7 +64,7 @@ Y <- 2*(X+1)*(X>-1) -2*(X-1)*(X>1)   + U + Ey  # two change-points located at x=
 SSS_res <- SSS(Z,X,Y,x_baseline_used = 0)  
 ```
 
-call `SSS_res$PIP_plot` and `SSS_res$hx` for fitting results ![Fig3](plots/Fig3.png) 
+call `SSS_res$PIP_plot` (or `SSS_res$hx`) for fitting results ![Fig3](plots/Fig3.png)
 
 you can also try parametric fitting with specified change-point (e.g. according to posterior mean)
 
@@ -65,7 +72,6 @@ you can also try parametric fitting with specified change-point (e.g. according 
 SS_res <- SS(Z,X,Y,x_baseline_used = 0, pos = SSS_res$posterior_mean )
 SS_res$hx
 ```
-
 
 ## 
 
