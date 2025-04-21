@@ -7,7 +7,7 @@ The SSS framework is for nonlinear causal effect analysis using instrumental var
 ✅ estimating the causal effect function of any shape in both nonpara and parametric way  
 ✅ investigating the potential effect change-point for both its number and locations 
 
-It contains the three **S** layers:  
+It makes most use of the three **S** layers:  
 🔧 **S**tratification  
 🔧 **S**calar-on-function or **S**calar-on-scalar regression model  
 🔧 **S**um-of-single-effect fitting  
@@ -21,7 +21,7 @@ it is simple, powerful, and can be implemented quickly with quite low computatio
 
 Paper: *to be added*
 
-## Illustration
+## Start
 
 install in R
 
@@ -72,6 +72,6 @@ SS_res <- SS(Z,X,Y,x_baseline_used = 0, pos = SSS_res$posterior_mean )
 SS_res$hx
 ```
 
-## 
+## More to know
 
-Interested in stratification and its application in Mendelian randomization? see [RFQT](https://github.com/HDTian/RFQT) and [DRMR](https://github.com/HDTian/DRMR)
+Interested in stratification and its application in Mendelian randomization? see [DRMR](https://github.com/HDTian/DRMR) and [RFQT](https://github.com/HDTian/RFQT)
