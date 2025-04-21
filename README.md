@@ -46,9 +46,9 @@ easily fit with one function
 SSS_res <- SSS(Z,X,Y,x_baseline_used = 0)  # use 0 as the basline value for defining the effect function h(x)
 ```
 
-see the posterior change-point location via `SSS_res$PIP_plot` ![Fig1](plots/Fig1.JPG)
+see the posterior change-point location via `SSS_res$PIP_plot` ![Fig1](plots/Fig1.png)
 
-see the estimated effect function $h(x)$ via `SSS_res$hx` ![Fig2](plots/Fig2.JPG)
+see the estimated effect function $h(x)$ via `SSS_res$hx` 
 
 try other examples
 
@@ -57,7 +57,7 @@ Y <- 2*(X+1)*(X>-1) -2*(X-1)*(X>1)   + U + Ey  # two change-points located at x=
 SSS_res <- SSS(Z,X,Y,x_baseline_used = 0)  
 ```
 
-call `SSS_res$PIP_plot` and `SSS_res$hx` for fitting results ![Fig3](plots/Fig3.JPG) 
+call `SSS_res$PIP_plot` and `SSS_res$hx` for fitting results ![Fig3](plots/Fig3.png) 
 
 you can also try parametric fitting with specified change-point (e.g. according to posterior mean)
 
