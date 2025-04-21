@@ -8,7 +8,7 @@ The SSS framework is for nonlinear causal effect analysis using instrumental var
 **S**um-of-single-effect fitting  
 
 so that SSS framework can work well in
-- ✅testing whether the effect is nonlinear or not   
+-[✅] testing whether the effect is nonlinear or not   
 - ✅estimating the causal effect function of any shape   
 - ✅investigating the potential effect change-point (both its number and locations) 
 
