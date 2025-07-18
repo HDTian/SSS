@@ -3,23 +3,20 @@
 The SSS framework for nonlinear IV analysis
 
 The SSS framework is for nonlinear causal effect analysis using instrumental variables to  
-✅ testing whether the effect is nonlinear or not   
-✅ estimating the causal effect function of any shape in both nonpara and parametric way  
-✅ investigating the potential effect change-point for both its number and locations 
+* testing whether the effect is nonlinear or not   
+* estimating the causal effect function of any shape in both nonpara and parametric way  
+* investigating the potential effect change-point for both its number and locations 
 
-It makes most use of the three **S** layers:  
-🔧 **S**tratification  
-🔧 **S**calar-on-function or **S**calar-on-scalar regression model  
-🔧 **S**um-of-single-effect fitting  
-so that it can work well even with     
-🟢 weak IV   
-🟢 single binary IV  
-🟢 invalid IV   
-🟢 complex or unknown confounding pattern  
+It makes most use of the three **S** layers (**S**tratification; **S**calar-on-function or **S**calar-on-scalar regression model; **S**um-of-single-effect fitting), so that it can work well even with     
+* weak IV   
+* single binary IV  
+* invalid IV   
+* complex or unknown confounding pattern  
 
-it is simple, powerful, and can be implemented quickly with quite low computational burden 🚀
+it is simple, powerful, and can be implemented quickly with quite low computational burden
 
-Paper: *to be added*
+Preprint: [Stratification-based Instrumental Variable Analysis Framework for Nonlinear Effect Analysis](https://arxiv.org/html/2507.07349v1)
+
 
 ## Start
 
