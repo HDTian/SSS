@@ -39,7 +39,7 @@ Z <- rbinom( N , 1 , 0.5 )
 U <- rnorm( N , 0 , 1 )
 Ex <- rnorm( N , 0 , 1 )
 alphaZ<- 0.15
-X <-  alphaZ*Z + U + Ex    #very weak instrument
+X <-  alphaZ*Z + U + Ex  
 # summary( lm(  X  ~ Z )  )$r.squared   #  < 0.01
 Ey <- rnorm( N , 0 , 1 )
 Y <- 1.0*(X-1)*(X>1)  + U + Ey  # one change-point located at x=1
