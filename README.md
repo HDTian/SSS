@@ -3,9 +3,9 @@
 The SSS framework for nonlinear IV analysis
 
 The SSS framework is for nonlinear causal effect analysis using instrumental variables to  
-* testing whether the effect is nonlinear or not   
-* estimating the causal effect function of any shape in both nonpara and parametric way  
-* investigating the potential effect change-point for both its number and locations 
+* testing whether the effect is nonlinear/heterogeneous or not   
+* estimating the causal effect function of any shape in both nonpara and parametric ways  
+* investigating the potential effect change-point for both its number and locations with uncertainty measurement 
 
 It makes most use of the three **S** layers (**S**tratification; **S**calar-on-function or **S**calar-on-scalar regression model; **S**um-of-single-effect fitting), so that it can work well with 
 (1) weak IV, (2) single binary IV, (3) invalid IV, (4) complex or unknown confounding pattern  
@@ -15,8 +15,13 @@ It is simple and can be implemented quickly with quite low computational burden
 Preprint: [Stratification-based Instrumental Variable Analysis Framework for Nonlinear Effect Analysis](https://arxiv.org/html/2507.07349v1)
 
 ## Algorithm overview
-![Overview](plots/Fig1.png)
+![Overview](plots/SSS_graph.png)
+ The graphical overview of the “SSS” framework for complete nonlinear effect analysis. From left to right: (Stratification) Multiple strata are constructed using a stratification approach that ensures the IV assumption holds within each stratum. The stratum-specific IV estimators $\hat{\beta}_k$, and the weight functions, $\hat{W}_k(x)$, are recorded. (Scalar modelling) A scalar-on-function regression is specified and then transformed into a scalar-on-scalar regression via a nonparametric representation of the underlying effect function $h'(x)$. (Sum-of-Single-Effect) A Bayesian approach with spike-and-slab priors is applied to infer change-points from the posterior inclusion probabilities $\pi^\ast$, and to estimate the effect shape function based on all posterior parameters.
 
+**Input:** The one-sample individual-level data of the instrument, the exposure, and the outcome
+
+
+**Output:** The effect change point inference result, the effect shape estimation result, ...
 
 ## Start
 
