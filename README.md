@@ -23,6 +23,7 @@ Preprint: [Stratification-based Instrumental Variable Analysis Framework for Non
 install in R
 
 ``` r
+devtools::install_github("HDTian/DRMR")
 devtools::install_github("HDTian/SSS")
 ```
 
