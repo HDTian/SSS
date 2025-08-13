@@ -74,6 +74,42 @@ SS_res <- SS(Z,X,Y,x_baseline_used = 0, pos = SSS_res$posterior_mean )
 SS_res$hx
 ```
 
+## Q&A
+Q1: What data should be used for this function?
+
+*A1: You should have the individual-level data, each individuals have the instrument, exposure, and outcome value.*
+
+Q2: I know this function works with a single IV, but what if I have high-dimensional instruments?
+
+*A2: You can aggregate them - partially or entirely - into a single IV score (e.g., polygenetic score), and then use that single IV score as the IV for our function*
+
+Q3: What does the stratification do in the functions `SS` and `SSS`? 
+
+*A3: Currently, `SS` and `SSS` use the doubly-ranked stratification method by default.* 
+
+Q4: I am new to the stratification idea - what is this? 
+
+*A4: Stratification idea means that you can stratify your samples into multiple subgroups such that the instrument is valid in each of your subgroups. If this works in your scenario, you will have a very good motivation to use stratification for nonlinear effect analysis. See the original paper for the detailed discussion and examples on this idea.*
+
+Q5: I am new to the doubly-ranked stratification method - what is this? 
+
+*A5: Doubly-ranked stratification is a method used for stratifying exposure and tries to avoid collider bias. Currently, this is the leading stratification-family method to be considered in many scenarios. It requires the rank-preserving assumptions that the rank index of counterfactual exposure level among the individuals is the same for different instrument levels.*
+
+Q6: How do I decide the number of strata in stratification?
+
+*A6: You may choose the number of strata such that your instrument strength is not too weak in each stratum; or consider multiple numbers of strata as a sensitivity analysis*
+
+Q7: What is the difference between the functions `SS` and `SSS`? 
+
+*A7: `SSS` is the recommended function to implement the complete SSS analysis framework. However, we realize the scenarios which one may prefer to do nonlinear effect analysis using the known polynomial basis function (i.e. traditional parametric way); in such case `SS` can be used.*
+
+Q8: I have specific questions - what should I do?
+
+*A8: Let me know!*
+
+
+
+
 ## More to know
 
 Interested in stratification and its application in Mendelian randomization? see [DRMR](https://github.com/HDTian/DRMR) and [RFQT](https://github.com/HDTian/RFQT)
