@@ -1,4 +1,6 @@
 ### Bug Log
+This log file recorded the odd bugs encountered during the package development. Only used for myself.
+
 
 ``` r
 Warning message:
