@@ -151,7 +151,7 @@ SSS<-function( Z ,
     geom_vline(aes(xintercept = posterior_mode), linetype = "dashed") +
     geom_vline(aes(xintercept = posterior_mean), linetype = "dotted") +
     labs(x = "Exposure level", y = "Posterior inclusion probability") +
-    facet_grid(~ KK) +  # 根据KK分面  # now KK: the detected change-point
+    facet_grid( ~ KK ) +  # 根据KK分面  # now KK: the detected change-point
     scale_x_continuous(breaks = extended_breaks(n = 9)) +  # 让刻度尽量均匀
     theme_bw() +theme(legend.position = "none")
 
