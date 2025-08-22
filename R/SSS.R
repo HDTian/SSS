@@ -12,7 +12,7 @@ SSS<-function( Z ,
                Ns_used=100, # the number of strata
                x_baseline_used = NA ,  # the baseline exposure level; default is mean(X)
                tpoints_used = 'quantile', # or 'uniform'  # the tpoints style
-               boundary_used = NA, # the user-specific vector for the left and right boundary for tpoints
+               boundary_used = NULL, # the user-specific vector for the left and right boundary for tpoints
                precision =100    # the precision number used in the exposure quantile region; default is 100
                ){
 
@@ -20,7 +20,7 @@ SSS<-function( Z ,
   RES<-list()
 
   if(tpoints_used == 'quantile'){
-    if(is.na(boundary_used)){
+    if(is.null(boundary_used)){
       tpoints<- quantile(X, seq(0,1, length=precision+1)    ) # tpoints are used for weight function and its integration
     }else{
       if (!(is.numeric(boundary_used) &&
@@ -38,7 +38,7 @@ SSS<-function( Z ,
 
 
   if(tpoints_used == 'uniform'){
-    if(is.na(boundary_used)){
+    if(is.null(boundary_used)){
       tpoints<- seq(  min(X)  ,max(X), length=precision+1)
     }else{
       if (!(is.numeric(boundary_used) &&
