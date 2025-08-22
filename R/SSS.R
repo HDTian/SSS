@@ -10,8 +10,9 @@ SSS<-function( Z ,
                X ,
                Y ,
                Ns_used=100, # the number of strata
-               x_baseline_used = NA ,  # the basline exposure level; default is mean(X)
-               tpoints_used = 'quantile', # the tpoints style
+               x_baseline_used = NA ,  # the baseline exposure level; default is mean(X)
+               tpoints_used = 'quantile', # or 'uniform'  # the tpoints style
+               boundary_used = NA, # the user-specific vector for the left and right boundary for tpoints
                precision =100    # the precision number used in the exposure quantile region; default is 100
                ){
 
@@ -19,10 +20,38 @@ SSS<-function( Z ,
   RES<-list()
 
   if(tpoints_used == 'quantile'){
-    tpoints<- quantile(X, seq(0,1, length=precision+1)    ) # tpoints are used for weight function and its integration
+    if(is.na(boundary_used)){
+      tpoints<- quantile(X, seq(0,1, length=precision+1)    ) # tpoints are used for weight function and its integration
+    }else{
+      if (!(is.numeric(boundary_used) &&
+            length(boundary_used) == 2 &&
+            all(is.finite(boundary_used)) &&
+            all(boundary_used > 0 & boundary_used < 1) &&
+            isTRUE(diff(boundary_used) > 0))) {
+        stop("`boundary_used` must be numeric length-2 with 0 < boundary_used[1] < boundary_used[2] < 1.")
+      }
+      tpoints<- quantile(X, seq(boundary_used[1],boundary_used[2], length=precision+1)    )
+    }
+
   }
+
+
+
   if(tpoints_used == 'uniform'){
-    tpoints<- seq(  min(X)  ,max(X), length=precision+1)
+    if(is.na(boundary_used)){
+      tpoints<- seq(  min(X)  ,max(X), length=precision+1)
+    }else{
+      if (!(is.numeric(boundary_used) &&
+            length(boundary_used) == 2 &&
+            all(is.finite(boundary_used)) &&
+            isTRUE(diff(boundary_used) > 0) &&
+            all(boundary_used > min(X, na.rm = TRUE)) &&
+            all(boundary_used < max(X, na.rm = TRUE)))) {
+        stop("`boundary_used` must be numeric length-2 with min(X) <boundary_used[1] < boundary_used[2] < 1 max(X).")
+      }
+      tpoints<- seq(  boundary_used[1]  ,boundary_used[2], length=precision+1)
+    }
+
   }
 
   ### DR stratification with strata number = Ns_used ---------------------------------------------------------------------
